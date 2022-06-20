@@ -5,11 +5,20 @@
     <title>Angular</title>
 </head>
 
-<body ng-app>
+<body ng-app="maneesh" ng-init="a=5;b=6">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    {{ "Hello" + "World"}}
     Module : A contianer for angular code
+    Directive : Extension of an HTML element, start with prefix called "ng"
+    Expressions : {{a*b}}
+    <p>Area is {{a*b}}</p>
+    <p>Area is <span ng-bind="a*b"></span></p>
+    <div ng-init="fname='maneesh';">
+        <p>full name is {{fname}}</p>
+    </div>
+    <div ng-init="even=[2,4,6,8]">
+        <p>array {{even[0]}}</p>
+    </div>
 </body>
 
 </html>
