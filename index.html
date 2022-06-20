@@ -21,8 +21,10 @@
         <p ng-repeat="number in even">Number is {{number}}</p>
     </div>
     <div ng-controller="justcontroller">
-        {{controllerName}}
-        Scope can be accesses in controller only
+       <p>{{controllerName}}</p> 
+       <p> Scope can be accessed in controller only</p>
+       <p ng-hide="showCoupon"> Fullname using function in controlller {{fullname()}}</p>
+       <p ng-show="showCoupon"> Coupon is {{coupon}}</p>
     </div>
 </body>
 
