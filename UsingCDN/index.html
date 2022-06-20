@@ -3,6 +3,7 @@
 
 <head>
     <title>Angular</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <style type="text/css">
         .ng-invalid.ng-dirty {
             border-color: red;
@@ -20,9 +21,6 @@
 </head>
 
 <body ng-app="myApp" ng-init="a=5;b=6">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="review.js"></script>
     Module : A contianer for angular code
     Directive : Extension of an HTML element, start with prefix called "ng"
     Expressions : {{a*b}}
@@ -84,6 +82,8 @@
         <h4> Ng Include</h4>
         <div ng-include="'include.html'"> </div>
         <owndirective></owndirective>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="review.js"></script>
     </div>
 </body>
 
