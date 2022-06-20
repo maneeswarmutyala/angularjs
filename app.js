@@ -59,9 +59,15 @@ app.controller("justcontroller", [
       },
     ];
     $scope.form = {};
-    $scope.addReview = function(){
-        $scope.reviews.push($scope.form);
-        $scope.form = {}
-    }
+    $scope.addReview = function () {
+      $scope.reviews.push($scope.form);
+      $scope.form = {};
+    };
   },
 ]);
+app.directive("owndirective", function () {
+  return {
+    restrict: "E",
+    templateUrl: "include.html",
+  };
+});
