@@ -3,6 +3,20 @@
 
 <head>
     <title>Angular</title>
+    <style type="text/css">
+        .ng-invalid.ng-dirty {
+            border-color: red;
+
+        }
+
+        .ng-valid.ng-dirty {
+            border-color: green;
+
+        }
+        input,textarea{
+            border: 2px solid;
+        }
+    </style>
 </head>
 
 <body ng-app="maneesh" ng-init="a=5;b=6">
@@ -54,15 +68,16 @@
                 <p><b>{{review.by}}</b></p>
             </div>
         </div>
-        <form name="reviewForm" ng-submit="addReview()">
+        <form name="reviewForm" ng-submit="reviewForm.$valid && addReview()" novalidate>
             <p>{{form.comment}}</p>
             <p>{{form.by}}</p>
 
             <label>Comment</label><br />
             <textarea ng-model="form.comment"></textarea><br />
             <label>Author</label><br />
-            <input type="email" ng-model="form.by" /><br />
-            <input type="submit" value="Add Review"/>
+            <input type="email" ng-model="form.by" required /><br />
+            <input type="submit" value="Add Review" required /><br />
+            <p>Form Valid ? {{reviewForm.$valid}}</p>
         </form>
     </div>
 </body>
