@@ -21,10 +21,27 @@
         <p ng-repeat="number in even">Number is {{number}}</p>
     </div>
     <div ng-controller="justcontroller">
-       <p>{{controllerName}}</p> 
-       <p> Scope can be accessed in controller only</p>
-       <p ng-hide="showCoupon"> Fullname using function in controlller {{fullname()}}</p>
-       <p ng-show="showCoupon"> Coupon is {{coupon}}</p>
+        <p>{{controllerName}}</p>
+        <p> Scope can be accessed in controller only</p>
+        <p ng-hide="showCoupon"> Fullname using function in controlller {{fullname()}}</p>
+        <hr>
+        <h4>Show Coupon When Fullname is available using ng-show and ng-hide </h4>
+        <p ng-hide="showCoupon"> Fullname using function in controlller {{fullname()}}</p>
+        <p ng-show="showCoupon"> Coupon is {{coupon}}</p>
+        <hr>
+        <h4>Filters limitTo, uppercase, lowercase, currency using pipe |</h4>
+
+        <div ng-repeat="user in users | limitTo:2">
+            <p>Name uppercase : {{user.name | uppercase}}</p>
+            <p>Name uppercase limitTo : {{user.name |uppercase | limitTo: 3}}</p>
+            <p>Name lowercase : {{user.name | lowercase}}</p>
+            <p>Salary {{user.salary | currency}}</p>
+        </div>
+        <hr>
+        <h4> Order by Descending using filter in Directive</h4>
+        <div ng-repeat="num in numbers | orderBy:'-nums'">
+            <p>{{num.nums}}</p>
+        </div>
     </div>
 </body>
 
