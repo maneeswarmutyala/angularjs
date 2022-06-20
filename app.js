@@ -48,5 +48,12 @@ app.controller("justcontroller", [
     $scope.toggleshow = function () {
       $scope.show = !$scope.show;
     };
+    $scope.reviews = [ {
+        comment : '1st comment',
+        by : 'Maneesh'
+    },{
+        comment : '2nd comment',
+        by : 'Mani'
+    },]
   },
 ]);

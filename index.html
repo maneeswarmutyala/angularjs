@@ -46,6 +46,23 @@
         <h4> Ng Click</h4>
         <button ng-click="count=count+1;toggleshow()">Clicks {{count}} </button>
         <p ng-show="show">{{count}}</p>
+        <hr>
+        <h4> Ng Form</h4>
+        <div ng-repeat="review in reviews">
+            <div style="background-color: #eee;">
+                <p>{{review.comment}}</p>
+                <p><b>{{review.by}}</b></p>
+            </div>
+        </div>
+        <form name="reviewForm">
+            <p>{{form.comment}}</p><br />
+            <p>{{form.author}}</p><br />
+
+            <label>Comment</label><br />
+            <textarea ng-model="form.comment"></textarea><br />
+            <label>Author</label><br />
+            <input type="text" ng-model="form.author" />
+        </form>
     </div>
 </body>
 
