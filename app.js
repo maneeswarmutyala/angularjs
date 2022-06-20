@@ -48,12 +48,20 @@ app.controller("justcontroller", [
     $scope.toggleshow = function () {
       $scope.show = !$scope.show;
     };
-    $scope.reviews = [ {
-        comment : '1st comment',
-        by : 'Maneesh'
-    },{
-        comment : '2nd comment',
-        by : 'Mani'
-    },]
+    $scope.reviews = [
+      {
+        comment: "1st comment",
+        by: "maneesh@gmail.com",
+      },
+      {
+        comment: "2nd comment",
+        by: "mani@gmail.com",
+      },
+    ];
+    $scope.form = {};
+    $scope.addReview = function(){
+        $scope.reviews.push($scope.form);
+        $scope.form = {}
+    }
   },
 ]);

@@ -54,14 +54,15 @@
                 <p><b>{{review.by}}</b></p>
             </div>
         </div>
-        <form name="reviewForm">
-            <p>{{form.comment}}</p><br />
-            <p>{{form.author}}</p><br />
+        <form name="reviewForm" ng-submit="addReview()">
+            <p>{{form.comment}}</p>
+            <p>{{form.by}}</p>
 
             <label>Comment</label><br />
             <textarea ng-model="form.comment"></textarea><br />
             <label>Author</label><br />
-            <input type="text" ng-model="form.author" />
+            <input type="email" ng-model="form.by" /><br />
+            <input type="submit" value="Add Review"/>
         </form>
     </div>
 </body>
