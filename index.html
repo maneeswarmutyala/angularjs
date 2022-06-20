@@ -42,6 +42,10 @@
         <div ng-repeat="num in numbers | orderBy:'-nums'">
             <p>{{num.nums}}</p>
         </div>
+        <hr>
+        <h4> Ng Click</h4>
+        <button ng-click="count=count+1;toggleshow()">Clicks {{count}} </button>
+        <p ng-show="show">{{count}}</p>
     </div>
 </body>
 

@@ -29,17 +29,24 @@ app.controller("justcontroller", [
         salary: 60000,
       },
     ];
-    $scope.numbers = [{
-        name : 'Ten',
-        nums : 10
-    },{
-        name : 'One',
-        nums : 1
-    },{
-        name : 'Five',
-        nums : 5
-    },
-]
+    $scope.numbers = [
+      {
+        name: "Ten",
+        nums: 10,
+      },
+      {
+        name: "One",
+        nums: 1,
+      },
+      {
+        name: "Five",
+        nums: 5,
+      },
+    ];
+    $scope.count = 0;
+    $scope.show = true;
+    $scope.toggleshow = function () {
+      $scope.show = !$scope.show;
+    };
   },
-  
 ]);
